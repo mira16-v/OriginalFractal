@@ -4,13 +4,15 @@ public void setup()
 }
 public void draw()
 {
-  fractal(50, 50, 40, 60);
+  myFractal(200, 200, 300, 300);
 }
-public void fractal(int x, int y, int wid, int len)
+public void myFractal(int x, int y, int wid, int len)
 {
   if(len <= 60){
     ellipse(x, y, wid, len);
+    ellipse(x, y, wid/2, len);
   } else {
-    fractal(x/3, y/3, wid/2, len/2);
+    myFractal(x, y, wid+len/2, len/2);
+    myFractal(x, y, wid+len/3, len/2);
   }
 }
