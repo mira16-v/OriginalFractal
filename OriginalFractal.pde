@@ -16,9 +16,13 @@ public void myFractal(int x, int y, int wid, int len)
     ellipse(x, y+100, wid/2, len);
     ellipse(x, y-100, wid, len);
     ellipse(x, y-100, wid/2, len);
+    ellipse(x, y-50, wid, len);
+    ellipse(x, y-50, wid/2, len);
+    ellipse(x, y+50, wid, len);
+    ellipse(x, y+50, wid/2, len);
   } else {
     myFractal(x, y, wid+len/4, len/4);
-    myFractal(x, y, wid+len/8, len/4);
-    myFractal(x, y, wid+len/12, len/4);
+    myFractal(x, y, wid+len/8, len/8);
+    myFractal(x, y, wid+len/12, len/12);
   }
 }
